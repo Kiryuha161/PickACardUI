@@ -8,14 +8,25 @@ namespace PickACardUI
     public class CardPicker
     {
         static Random random = new Random();//Генератор случайных чисел
+        
         public static string[] PickSomeCards(int numberOfCards)
         {
+            /*random.Equals
+             *random.GetHashCode
+             *random.GetType
+             *random.Next
+             *random.NextBytes
+             *random.NextDouble
+             *random.ToString
+             */
             string[] pickedCards = new string[numberOfCards];
             for (int i = 0; i < numberOfCards; i++)
             {
                 pickedCards[i] = RandomValue() + " " + RandomSuit();
             }
             return pickedCards;
+
+         
         }
         //Команда return позволяет метод немедленно прервать выполнение и вернуться к команде, из которой он был вызван
         private static string RandomSuit()
